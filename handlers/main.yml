@@ -4,6 +4,11 @@
   notify:
     - restart Minecraft
 
+- name: reload service Minecraft
+  systemd:
+    name: "{{ minecraft_service_name }}"
+    state: reloaded
+
 - name: restart Minecraft
   service:
     name: "{{ minecraft_service_name }}"

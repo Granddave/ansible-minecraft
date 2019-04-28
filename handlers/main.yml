@@ -4,10 +4,9 @@
   notify:
     - restart Minecraft
 
-- name: reload service Minecraft
+- name: reload systemd units
   systemd:
-    name: "{{ minecraft_service_name }}"
-    state: reloaded
+    daemon_reload: yes
 
 - name: restart Minecraft
   service:

@@ -13,7 +13,7 @@
     - minecraft.service
     - minecraft.socket
   notify:
-    - reload service Minecraft
+    - reload systemd units
     - restart Minecraft
 
 - name: configure console directory
